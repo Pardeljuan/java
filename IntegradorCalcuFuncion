@@ -1,0 +1,81 @@
+package calculadora;
+
+import java.util.Scanner;
+
+public class calculadoraTP {
+	
+	public static void main(String[] args) {
+		metodos operaciones = new metodos();
+		Scanner entrada = new Scanner(System.in);
+		int n1, n2, resul, opcion;
+		boolean opc = true;
+		
+		while(opc) {
+			System.out.println("Menu de opciones");
+			System.out.println("Pulse alguna de las opciones para continuar");
+			System.out.println("1 - Suma");
+			System.out.println("2 - Resta ");
+			System.out.println("3 - Multiplicacion");
+			System.out.println("4 - Division");
+			System.out.println("5 - Salir");
+			opcion = entrada.nextInt();
+			
+			if(opcion == 5) {
+				System.out.println("Saliendo");
+				break;
+			}else {
+				switch(opcion) {
+				
+					case 1:
+						System.out.println("Eligio Sumar");
+						System.out.println("Ingrese el Primer numero: ");
+						n1 = entrada.nextInt();
+						System.out.println("Ingrese el Segundo numero: ");
+						n2 = entrada.nextInt();
+						resul = operaciones.suma(n1, n2);
+						System.out.println("El resultado de la suma es " + resul);
+						System.out.println("");
+						break;
+						
+					case 2:
+						System.out.println("Eligio Resta");
+						System.out.println("Ingrese el Primer numero: ");
+						n1 = entrada.nextInt();
+						System.out.println("Ingrese el Segundo numero: ");
+						n2 = entrada.nextInt();
+						resul = operaciones.res(n1, n2);
+						System.out.println("El resultado de la resta es " + resul);
+						System.out.println("");
+						break;
+						
+					case 3:
+						System.out.println("Eligio Multiplicar");
+						System.out.println("Ingrese el Primer numero: ");
+						n1 = entrada.nextInt();
+						System.out.println("Ingrese el Segundo numero: ");
+						n2 = entrada.nextInt();
+						resul = operaciones.multi(n1, n2);
+						System.out.println("El resultado de la multiplicacion es " + resul);
+						System.out.println("");
+						break;
+						
+					case 4:
+						System.out.println("Eligio Dividir");
+						System.out.println("Ingrese el Primer numero: ");
+						n1 = entrada.nextInt();
+						System.out.println("Ingrese el Segundo numero: ");
+						n2 = entrada.nextInt();
+						resul = operaciones.div(n1, n2);
+						System.out.println("El resultado de la division es " + resul);
+						System.out.println("");
+						break;
+					
+					default:
+						System.out.println("Opcion invalida... Intente nuevamente");
+						System.out.println("");
+				}
+			}
+		}
+	}
+
+}
