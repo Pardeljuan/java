@@ -1,0 +1,27 @@
+package calculadora;
+
+public class metodos {
+	public int suma(int n1, int n2) {
+		int resul = 0;
+		resul = n1 + n2;
+		return resul;
+	}
+	
+	public int res(int n1, int n2) {
+		int resul = 0;
+		resul = n1 - n2;
+		return resul;
+	}
+	
+	public int multi(int n1, int n2) {
+		int resul = 0;
+		resul = n1 * n2;
+		return resul;
+	}
+	
+	public int div(int n1, int n2) {
+		int resul = 0;
+		resul = n1 / n2;
+		return resul;
+	}
+}
